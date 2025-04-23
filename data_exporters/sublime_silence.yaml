@@ -1,0 +1,10 @@
+config:
+  database: embed
+  host: database
+  password: password
+  port: 5432
+  schema: public
+  username: postgres
+  replication_slot: null
+  publication_name: null
+destination: postgresql

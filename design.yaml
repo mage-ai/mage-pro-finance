@@ -1,0 +1,24 @@
+components:
+  header:
+    hidden: true
+  navigation_left:
+    hidden: true
+  navigation_right:
+    hidden: true
+pages:
+  pipelines:
+    edit:
+      buttons:
+        block:
+          add:
+            items:
+            - python
+            - sql
+            items_more:
+            - data_loader
+            - transformer
+            - data_exporter
+          languages:
+          - python
+          - sql
+      version: '0'

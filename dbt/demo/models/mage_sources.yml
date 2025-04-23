@@ -1,0 +1,14 @@
+sources:
+- description: Dataframes Mage upstream blocks
+  loader: mage
+  name: mage_demo
+  schema: main
+  tables:
+  - description: Dataframe for block `astral_solaris` of the `subliminal_nexus` mage
+      pipeline.
+    identifier: mage_subliminal_nexus_astral_solaris
+    meta:
+      block_uuid: astral_solaris
+      pipeline_uuid: subliminal_nexus
+    name: subliminal_nexus_astral_solaris
+version: 2

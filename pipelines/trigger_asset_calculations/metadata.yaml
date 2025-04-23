@@ -1,0 +1,42 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: spark
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: Thalassic fission
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks: []
+  uuid: thalassic_fission
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2025-04-09 14:22:25.261295+00:00'
+created_by: admin
+description: Programmatically trigger the pipeline to calculate assets.
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: Trigger asset calculations
+notification_config: {}
+overrides: null
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+state_store_config: {}
+tags: []
+type: python
+uuid: trigger_asset_calculations
+variables_dir: /root/.mage_data/embed
+widgets: []

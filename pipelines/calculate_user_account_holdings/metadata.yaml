@@ -1,0 +1,128 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    global_data_product:
+      uuid: company_stock_prices
+  downstream_blocks:
+  - load_stock_data_502
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: Company stock prices
+  retry_config: null
+  status: executed
+  timeout: null
+  type: global_data_product
+  upstream_blocks: []
+  uuid: company_stock_prices
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - prepare_financial_data_502
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: Load stock data
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks:
+  - company_stock_prices
+  uuid: load_stock_data_502
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - market_analysis_502
+  - company_comparison_502
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: Prepare financial data
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - load_stock_data_502
+  uuid: prepare_financial_data_502
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart:
+      layout:
+        output_0:
+          height: 1000
+      type: plotly
+    file_path: transformers/market_analysis_502.py
+    file_source:
+      path: transformers/market_analysis_502.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: market_analysis_502
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - prepare_financial_data_502
+  uuid: market_analysis_502
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    chart:
+      layout:
+        output_0:
+          height: 1000
+      type: plotly
+    file_path: transformers/company_comparison_502.py
+    file_source:
+      path: transformers/company_comparison_502.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: company_comparison_502
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - prepare_financial_data_502
+  uuid: company_comparison_502
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2025-04-09 06:56:46.583378+00:00'
+created_by: admin
+description: This data pipeline processes company stock and financial data.
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: Calculate user account holdings
+notification_config: {}
+overrides: null
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+state_store_config: {}
+tags: []
+type: python
+uuid: calculate_user_account_holdings
+variables_dir: /root/.mage_data/embed
+widgets: []

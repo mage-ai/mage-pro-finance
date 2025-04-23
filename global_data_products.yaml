@@ -1,0 +1,12 @@
+company_stock_prices:
+  object_type: pipeline
+  object_uuid: load_files_from_sftp_server_astral_nexus
+  outdated_after:
+    seconds: 3600
+  outdated_starting_at:
+    hour_of_day: 12
+    minute_of_hour: 15
+  repo_path: /home/projects/embed
+  settings:
+    ethereal_crucible:
+      partitions: 1
