@@ -1,7 +1,0 @@
-demo:
-  outputs:
-    dev:
-      path: database.duckdb
-      schema: main
-      type: duckdb
-  target: dev
